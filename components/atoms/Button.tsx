@@ -1,11 +1,11 @@
-"use client"
+type ButtonProps = {
+  text: string,
+  onClick: () => void,
+}
 
-export default function Button() {
-  const handleClick = () => {
-    console.log("hello");
-  };
+export default function Button({text, onClick}: ButtonProps) {
 
-  return <button className="bg-black text-white" onClick={handleClick}>Click me</button>;
+  return <button className="bg-black text-white" onClick={onClick}>{text}</button>;
 }
 
 
